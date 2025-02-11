@@ -33,6 +33,25 @@
           --font-sora: 'Sora', serif;
           --font-ADLaMDisplay: "ADLaM Display", serif;
         }
+
+        @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(1000px); /* Move right by 1000px */
+        }
+        100% {
+            transform: translateX(0); /* Move back to the left */
+        }
+    }
+
+    /* Applying animation to the image container */
+    .animate-slide {
+        animation: slide 10s linear infinite;
+    }
+
+
       </style>
 
 </head>
@@ -84,37 +103,32 @@
 
     <main>
 
-        <section class="  max-w-7xl mx-auto my-20 mb-40 sm:mb-72  ">
+        <section class="max-w-7xl mx-auto my-20 mb-40 sm:mb-72">
 
             <div class="flex relative p-3">
-
-
-                <div class="space-y-7   sm:w-1/2">
-                    <h1 class="font-ADLaMDisplay text-5xl ">
-                        Pamper Your Pet, <br>Because They Deserve <br> the Bes
+        
+                <div class="space-y-7 sm:w-1/2">
+                    <h1 class="font-ADLaMDisplay text-5xl">
+                        Pamper Your Pet, <br>Because They Deserve <br> the Best
                     </h1>
-
-                    <p class="text-[#111111a5] w-5/6 ">
+        
+                    <p class="text-[#111111a5] w-5/6">
                         Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
                     </p>
-
-                    <button class=" btn btn-primary text-black border-0 bg-[#FFDC26] px-10">
+        
+                    <button class="btn btn-primary text-black border-0 bg-[#FFDC26] px-10">
                         Find a pet
                     </button>
-
                 </div>
-
-                <!-- img container  -->
-
-                <div class="absolute -z-10   top-3/4 sm:-top-1/2">
+        
+                <!-- img container with animation -->
+                <div class="absolute -z-10 top-3/4 sm:-top-1/2 animate-slide">
                     <img class="w-full" src="./c1-assets/cat-big.png" alt="">
                 </div>
-
-
+        
             </div>
-
+        
         </section>
-
         <!-- browser section Starts here  -->
 
         </section> <section class="max-w-7xl mx-auto my-20  p-4" >
